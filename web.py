@@ -43,7 +43,7 @@ def get():
 
 
 
-# @repeat(every(100).minutes)
+@repeat(every(100).minutes)
 def run():
     get()
     pushToGithub()
@@ -51,7 +51,8 @@ def run():
 
 
 if __name__ == "__main__":
-    # while True:
-    #     run_pending()
-    #     time.sleep(1)
     run()
+    while True:
+        run_pending()
+        time.sleep(1)
+    
