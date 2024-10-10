@@ -43,7 +43,7 @@ def get():
 
 
 
-@repeat(every(100).minutes)
+@repeat(every(1000).minutes)
 def run():
     get()
     pushToGithub()
